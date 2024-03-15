@@ -17,12 +17,18 @@ main {
 }
 
 
+p {
+  font-size: 30px;
+  width: 85%;
+  text-align: center;
+  margin-left: 100px;
+}
 
 
 
-
-/* -------- Landing/Hero/Header -------- */
-/*image credit to @thewittlesheep on x/twitter - former stream graphic artist for twitch streamers -- this is an old banner of mine i commissioned when i streamed*/
+/* -------- Landing Hero & Section Headers -------- */
+/*image credit to @thewittlesheep on x/twitter - former stream graphic artist for twitch streamers 
+--this is an old banner of mine I commissioned when I used to live-stream that I have rights to use*/
 
 header {
     display: flex;
@@ -41,9 +47,64 @@ header {
 }
 
 
+.border {
+  border-bottom: 50px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-style: solid;
+  border-image: linear-gradient(to left,#E37C86, #8C5B94) 1;
+}
 
-/* -------- Headings -------- */
 
+h1 {
+  display: inline;
+  letter-spacing: 5px;
+  font-weight: 500;
+  font-size: 175px;
+  background: -webkit-linear-gradient(#E37C86, #8C5B94);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: rotate(-90deg);
+  margin-left: -200px;
+  text-transform: uppercase;
+}
+
+/*contact h2 design from https://codepen.io/vedadesigns/pen/GPxYZg with small tweaks to match theme */
+.conh2 {
+  margin-left: 290px;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5em;
+  padding-bottom: 15px;
+  position: relative;
+}
+.conh2:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 55px;
+  background-color: #111;
+}
+.conh2:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  height: 1px;
+  width: 95%;
+  max-width: 250px;
+  background-color: #333;
+}
+
+.section-head {
+  max-width: 300px;
+  display: flex;
+  flex: 1 1 300px;
+}
 
 
 
@@ -95,7 +156,7 @@ nav {
 }
 
 
-/* -------- Body -- 3 main sections - about / port / contact -------- */
+/* -------- Body -- 3 main sections - about / port (grid for cards here) / contact -------- */
 
 
 .my-sections {
@@ -108,13 +169,10 @@ nav {
   padding: 10px;
 }
 
-.my-sections p {
-  align-self: center;
-  font-size: 20pt;
-}
 
 .text-box {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
   padding: 30px;
@@ -128,116 +186,156 @@ nav {
   width: 85%;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  }
-  
-  .work1 { 
-    grid-area: 1 / 1 / 3 / 3; 
-    background-color: salmon;
-    background-image: url("../images/textbg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  
-  .work2 { 
-    grid-area: 1 / 3 / 3 / 4; 
-    background-color: salmon;
-    background-image: url("../images/textbg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  
-  .work3 { 
-    grid-area: 1 / 4 / 3 / 5; 
-    background-color: salmon;
-    background-image: url("../images/textbg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  
-  }
-  
-  
-  .work4 { 
-    grid-area: 3 / 1 / 5 / 2; 
-    background-color: salmon;
-    background-image: url("../images/textbg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  
-  }
-  
-  
-  .work5 { 
-    grid-area: 3 / 2 / 5 / 3; 
-    background-color: salmon;
-    background-image: url("../images/textbg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  
-  }
-  
-  
-  
-  .work6 { 
-    grid-area: 3 / 3 / 5 / 4; 
-    background-color: salmon;
-    background-image: url("../images/textbg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  
-  }
-  
-  
-  
-  .work7 { 
-    grid-area: 3 / 4 / 5 / 5; 
-    background-color: salmon;
-    background-image: url("../images/textbg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
   }
 
+.work{
+  background-color: salmon;
+  background-image: url("../images/textbg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 300ms;
+  border-radius: 35px;
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
 
+  
+.p-a { 
+  grid-area: 1 / 1 / 3 / 3; 
+  background-image: url("../images/Screenshot\ 2024-03-14\ 201353.png");
+  background-position: 0px -2px;
 
-.border {
-  border-bottom: 50px;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-style: solid;
-  border-image: linear-gradient(to left,#E37C86, #8C5B94) 1;
 }
 
 
-h1 {
-  display: inline;
-  letter-spacing: 5px;
-  font-weight: 500;
-  font-size: 175px;
-  background: -webkit-linear-gradient(#E37C86, #8C5B94);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transform: rotate(-90deg);
-  margin-left: -200px;
+
+.p-b { grid-area: 1 / 3 / 3 / 4; }
+.p-c { grid-area: 1 / 4 / 3 / 5; }
+.p-d { grid-area: 3 / 1 / 5 / 2; }
+.p-e { grid-area: 3 / 2 / 5 / 3; }
+.p-f { grid-area: 3 / 3 / 5 / 4; }
+.p-g { grid-area: 3 / 4 / 5 / 5; }
+
+
+
+
+
+
+
+
+
+
+/* -------- Portfolio Card Hover Effects -------- */
+/* Custom effect from https://github.com/miketricking/bootstrap-image-hover  -- Hover Effect 12 
+--some slight adjustments made by me to match my overall theme and to work properly with hovering grid cells */
+
+
+.work .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: rgba(232, 160, 141, 0.3);
+  -webkit-transition: all 0.8s  cubic-bezier(0.88,-0.99, 0, 1.81);
+  transition: all 0.85s  cubic-bezier(0.88,-0.99, 0, 1.81);
+}
+
+.work:hover .overlay {
+   background-color: rgba(139, 122, 170, 0.4);
+}
+
+.work img {
+  display: block;
+  position: relative;
+}
+
+.work h2 {
   text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 25px;
+  padding: 10px;
+  background: rgba(231, 166, 125, 0.8);
+  -webkit-transform: translateY(325px);
+  -ms-transform: translateY(325px);
+  transform: translateY(325px);
+  -webkit-transition: all 0.85s  cubic-bezier(0.88,-0.99, 0, 1.81);
+  transition: all 0.85s  cubic-bezier(0.88,-0.99, 0, 1.81);
 }
 
-.section-head {
-  max-width: 300px;
-  display: flex;
-  flex: 1 1 300px;
+.work:hover h2 {
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
 }
+
+.work a.info {
+  display: inline-block;
+  font-size: 22px;
+  text-decoration: none;
+  padding: 7px 14px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #fff;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.85s  cubic-bezier(0.88,-0.99, 0, 1.81);
+  transition: all 0.85s  cubic-bezier(0.88,-0.99, 0, 1.81);
+  font-weight: normal;
+  margin: 75px 0 0 0;
+  padding: 62px 100px;
+  background-image: url("../images/textbg.png");
+
+  
+}
+
+.work:hover a.info {
+  opacity: 0.87;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.work a.info:hover {
+  box-shadow: 0 0 5px #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
 
 
 
