@@ -20,7 +20,7 @@ body, main, html {
 
 p {
   display: block;
-  font-size: 1.2vw ;
+  font-size: 1.5vw ;
   max-width:100%;
   height: auto;
   margin: 10px auto;
@@ -61,6 +61,7 @@ h1 {
   font-weight: 500;
   font-size: 8vw;
   background: -webkit-linear-gradient(#E37C86, #8C5B94);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: rotate(-90deg);
@@ -111,6 +112,8 @@ h1 {
   max-width: 225px;
   background-color: #333;
 }
+
+
 
 .conh2 img {
   width: 45px;
@@ -173,13 +176,12 @@ nav {
 
 .my-sections {
   height: 100vh;
-  width: 90%;
+  width: 100%;
   padding: 40vh; 
   margin: auto;
   display: flex;
   flex-wrap: nowrap;
   padding: 10px;
-  flex-direction: row;
   align-items: center;
   overflow: hidden;
   
@@ -191,7 +193,7 @@ nav {
   flex: 1 1 300px;
 }
 
-.text-box {
+.text-box1 {
   display: flex;
   flex-wrap: wrap-reverse;
   width: auto;
@@ -203,6 +205,21 @@ nav {
   overflow: hidden;
 }
 
+.text-box2 {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
+
+.text-box3 {
+  display: flex;
+  flex-wrap: nowrap;
+  width: auto;
+  height: auto;
+  padding: 30px;
+}
 
 
 .port-grid {
@@ -248,12 +265,12 @@ nav {
 .p-f { grid-area: 3 / 3 / 5 / 4; }
 .p-g { grid-area: 3 / 4 / 5 / 5; }*/
 
-.text-box p {
+.text-box1 p {
   float:left;
   width: 50%;
 }
 
-.text-box img{
+.text-box1 img{
   float: right;
   width: 38%;
 }
@@ -262,8 +279,7 @@ nav {
 
 .devImg{
   display: inline-block;
-  width: 50%;
-  margin-left:50px;
+  width: 100%;
   padding: 6px;
   background: rgba(192, 111, 117, 0.5);
   border-radius: 50em;
