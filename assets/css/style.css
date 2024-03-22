@@ -383,6 +383,14 @@ nav {
 
 
 /* -------- responsive changes --------*/
+@media screen and (min-width: 1440px) and (max-width: 2000px) {
+  .header {
+    height: 100vh;
+    width: auto;
+    background-position: 0px;
+  }
+}
+
 
 @media screen and (max-width: 1440px) {
   .header {
