@@ -6,7 +6,7 @@ My personal portfolio documenting my web development progress made from scratch.
 
 ## Usage
 
-[Click here to navigate to deployed/refactored page](https://macbetthh.github.io/mckinney_portfolio/)
+[Click here to navigate to deployed page](https://macbetthh.github.io/mckinney_portfolio/)
 
 ## Screenshots
 Header/Hero image & Nav preview \
