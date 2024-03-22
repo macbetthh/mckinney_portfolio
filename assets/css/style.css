@@ -1,7 +1,6 @@
 /* -------- Universal / Global Attributes -------- */
 
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
@@ -15,16 +14,15 @@ html {
 }
 
 
-body, main, html {
-  height: 100vh;
-  margin: auto;
+body {
+  margin: 0;
 }
 
 
 
 p {
   display: block;
-  font-size: 1.5vw ;
+  font-size: 2vw ;
   max-width:100%;
   height: auto;
   margin: 10px auto;
@@ -46,12 +44,12 @@ a {
 .header {
     background-image: url("../images/bethBaxleySunset.jpeg");
     height: 100vh;
-    width: 100%;
-    padding: 40vh; 
+    width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-x:center;
-    margin: -100px 0 0 0;
+    background-position:center center;
+    background-attachment: fixed;
+    margin-top: -100px;
 
 }
 
@@ -59,19 +57,25 @@ a {
 h1 {
   display: inline;
   letter-spacing: 5px;
-  /* font-weight: 500; */
-  font-size: 8vw;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 7.3vw;
   background: -webkit-linear-gradient(#E37C86, #8C5B94);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transform: rotate(-90deg);
   text-transform: uppercase;
+  border: 0;
+  border-top: 0.2vw solid transparent; 
+  border-bottom: 0.2vw solid transparent; 
+  overflow: hidden;
 }
 
 
+
 .border {
-  border-bottom: 1vw;
+  border-width: 1vw;
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -87,6 +91,8 @@ h1 {
 
 /* -------- NAVIGATION -------- */
 
+
+
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -96,8 +102,12 @@ nav {
     align-items: flex-start;
     justify-content: center;
     align-content: flex-start;
-
-      }
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+  }
+  
   
   nav ul {
     text-align: center;
@@ -139,6 +149,7 @@ nav {
 
 
 .my-sections {
+  position: relative;
   height: 100vh;
   width: 100%;
   padding: 40vh; 
@@ -151,25 +162,18 @@ nav {
   
 }
 
-/*
-.section-head {
-  display: inline;
-  padding: 10px;
-  max-width: 297px;
-  max-height: 100vh;
-  transform: rotate(-90deg);
 
-}*/
 
 
 
 
 .text-box1 {
-  display: flex;
+  display: flex; /*flex-direction: column in mobile view*/
   flex-wrap: wrap-reverse;
   width: auto;
   height: auto;
-  padding: 30px;
+  padding-right: 90px;
+  margin-top: 260px;
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
@@ -177,18 +181,18 @@ nav {
 }
 
 .text-box1 p {
-  float:left;
-  width: 50%;
+  width: 65%;
+  margin-top: 20px;
 }
 
 .text-box1 img{
-  float: right;
-  width: 38%;
+  width: 25%; 
 }
 
-.devImg{
+.devImg{ 
   display: inline-block;
   width: 100%;
+  height: auto;
   padding: 6px;
   background: rgba(192, 111, 117, 0.5);
   border-radius: 50em;
@@ -205,10 +209,11 @@ nav {
 -made quite a few adjustments to match my overall theme, to work properly with hovering grid cells, and to work *somewhat* responsively  */
 
 .text-box2 {
+  position: relative;
   display: flex;
   flex-wrap: nowrap;
-  margin: auto;
-  width: 80%;
+  margin: 300px auto 0;
+  width: 100%;
   height: 100%;
   padding: 30px;
   overflow: hidden;
@@ -219,11 +224,10 @@ nav {
   display: grid;
   margin: auto;
   min-height: 60vh;
-  width: 85%;
-  grid-template-columns: repeat(4, minmax(auto, 1fr));
-  grid-template-rows: repeat(2, minmax(300px, 0fr));
-  grid-column-gap: 25px;
-  grid-row-gap: 25px;
+  width: 90%;
+  grid-template-columns: repeat(3, minmax(auto, 1fr)); 
+  grid-template-rows: repeat(2, minmax(auto, 1fr));
+  grid-gap: 25px;
   overflow:hidden;
   }
 
@@ -244,12 +248,16 @@ nav {
   cursor: default;
 }
 
-.p-a { 
-  grid-column: 1 / 3; 
+.first { 
+  grid-column: span 2; 
   background-image: url("../images/Screenshot\ 2024-03-14\ 201353.png");
   background-position: 0px -2px;
 }
 
+.second {
+  background-image: url("../images/payrolltrackerapp.png");
+  background-position: 0px -5px;
+}
 
 
 .work .overlay {
@@ -265,12 +273,12 @@ nav {
 }
 
 .work:hover .overlay {
-   background-color: rgba(139, 122, 170, 0.4);
+  background-color: rgba(139, 122, 170, 0.4);
 }
 
 .work img {
   display: block;
-  position: relative;
+  position: fixed;
 }
 
 .work h2 {
@@ -300,25 +308,18 @@ nav {
 
 /* -------- CONTACT SECTION --------*/
 /*contact h2 design from https://codepen.io/vedadesigns/pen/GPxYZg with small tweaks to match theme */
-.text-box3 {
-  display: flex;
-  flex-wrap: nowrap;
-  width: auto;
-  height: auto;
-  padding: 30px;
-  overflow: hidden;
-}
 
 
 .conh2 {
-  margin-left: 245px;
-  font-size: 1.5vw;
+  font-size: 1.8vw;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5em;
   padding-bottom: 15px;
+  margin-bottom: 20px;
   position: relative;
 }
+
 
 .conh2:before {
   content: "";
@@ -341,79 +342,170 @@ nav {
   background-color: #333;
 }
 
-.text-box3 ul li {
-  display: inline-flex;
-}
-.text-box3 li {
-  list-style: none;
-
-} 
-
-
 .conh2 img {
   width: 45px;
   height: auto;
 }
 
 
+.text-box3 {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  overflow: hidden;
+}
+
+.text-box3 ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.text-box3 li {
+  list-style: none;
+  margin: 100px; 
+}
+
+
+
+
+
+
 
 
 /* -------- responsive changes --------*/
-@media screen and (min-width: 1200px) {
-  .header .my-sections {
-    height: 100vh;
-    width: 100%;
-    padding: 40vh; 
+@media screen and (max-width: 1024px) {
+  header {
+    background-position-x: center;
   }
 
+.first { 
+  grid-column: span 1;
+  grid-row: span 2; 
+}
+
+.port-grid {
+  width: 100%;
+  margin: 0;
+  grid-template-columns: repeat(1, minmax(auto, 1fr));
+  grid-template-rows: repeat(5, minmax(auto, 1fr));
+
+  }
   
 }
 
-@media screen and (min-width: 992px) {
-  .header .my-sections {
-    height: 100vh;
-    width: 100%;
-    padding: 40vh; 
+
+
+@media screen and (max-width: 768px) {
+  header {
+    background-position-x: center;
+  }
+
+  .text-box1 {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 10vw;
+    left: 50%;
+    top: 0px;
+    transform: translateX(-50%);
+    margin: 0 auto;
+  }
+  .conh2 {
+    font-size: 3vw;
+}
+
+  .border {
+    border-bottom-width: 1.5vw;
+  }
+  nav ul li a {
+    padding: 15px; 
+    font-size: 18px; 
+}
+
+
+.first { 
+  grid-column: span 1;
+  grid-row: span 2; 
+}
+
+.port-grid {
+  width: 100%;
+  margin: 0;
+  grid-template-columns: repeat(1, minmax(auto, 1fr));
+  grid-template-rows: repeat(5, minmax(auto, 1fr));
+
+  }
+
+  .text-box1 img {
+    width: 70%;
+    
+}
+  .devImg {
+    order: -1;
+  }
+  .text-box1 {
+    flex-direction: column;
+    padding: 0;
+    margin: 100px;
+  }
+  .text-box1 p {
+    font-size: 3vw;
+    width: 95%
   }
 }
 
-@media screen and (min-width: 768px) {
-  .header .my-sections {
-    height: 100vh;
-    width: 100%;
-    padding: 40vh; 
+
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 13vw;
   }
+    .conh2 {
+    font-size: 5vw;
 }
 
-
-@media screen and (min-width: 600px) {
-  .header .my-sections {
-    height: 100vh;
-    width: 100%;
-    padding: 40vh; 
+  .border {
+    border-bottom-width: 1vw; 
   }
-}
-
-@media screen and (max-width: 600px) {
-  .header .my-sections {
-    height: 100vh;
-    width: 100%;
-    padding: 40vh; 
+  .text-box1 {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
   }
-}
-
-@media screen and (max-width: 420px) {
-  .header .my-sections {
-    height: 100vh;
-    width: 100%;
-    padding: 40vh; 
+  .text-box1 p {
+    font-size: 4vw;
+    width: 95%
   }
-}
-
-@media screen and (max-width: 320px) {
-  .header .my-sections {
-    height: 100vh;
-    width: 100%;
-    padding: 40vh; 
+  nav ul li a {
+    padding: 5px; 
+    font-size: 4vw;
   }
+
+  .first { 
+    grid-column: span 1;
+    grid-row: span 2; 
+  }
+
+  .port-grid {
+    width: 100%;
+    margin: 0;
+    grid-template-columns: repeat(1, minmax(auto, 1fr));
+    grid-template-rows: repeat(5, minmax(auto, 1fr));
+
+    }
+    .text-box1 img {
+      width: 95%;
+  }
+    .devImg {
+      order: -1;
+    }
+
 }
