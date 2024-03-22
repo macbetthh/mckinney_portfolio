@@ -1,16 +1,16 @@
 # Beth McKinney Portfolio
 ## Description
 
-My personal portfolio documenting my web development progress
+My personal portfolio documenting my web development progress made from scratch.
 
 
 ## Usage
 
-[Click here to navigate to deployed/refactored page](https://macbetthh.github.io/horiseon-mod1-challenge/)
+[Click here to navigate to deployed/refactored page](https://macbetthh.github.io/mckinney_portfolio/)
 
 ## Screenshots
-Snip of some of the HTML after refactoring \
-![Screenshot](urlhere "HTML Snip") 
+Header/Hero image & Nav preview \
+![Screenshot](urlhere "Preview of portfolio background image and top navigation- shows a chibi style drawing of Beth and her dog Baxley ") 
 
 Snip of some of the CSS after refactoring \
 ![Screenshot](urlhere "CSS Snip") 
