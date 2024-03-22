@@ -31,6 +31,9 @@ Portfolio Grid Animation / Hover inspiration \
 [Custom effect inspiration source](https://github.com/miketricking/bootstrap-image-hover) -- Hover Effect 12
 Made quite a few adjustments to match my overall theme, to work properly with hovering grid cells, and to work responsively as best as I could with the current knowledge I have.
 
+Contact H2 Borders \
+[H2 Border inspiration source](https://codepen.io/vedadesigns/pen/GPxYZg)
+
 Social Media Icons \
 [Icons](https://www.iconfinder.com/search/icons?family=goodies)
 
