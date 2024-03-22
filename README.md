@@ -10,13 +10,13 @@ My personal portfolio documenting my web development progress made from scratch.
 
 ## Screenshots
 Header/Hero image & Nav preview \
-![Screenshot](urlhere "Preview of portfolio background image and top navigation- shows a chibi style drawing of Beth and her dog Baxley ") 
+![Screenshot](https://github.com/macbetthh/mckinney_portfolio/blob/main/assets/images/Heronavsnap.png "Preview of portfolio background image and top navigation- shows a chibi style drawing of Beth and her dog Baxley ") 
 
-Snip of some of the CSS after refactoring \
-![Screenshot](urlhere "CSS Snip") 
+Section preview \
+![Screenshot](https://github.com/macbetthh/mckinney_portfolio/blob/main/assets/images/sectionpreview.png "Preview of the sections that will be displayed on the live portfolio - this one depicts a portion of the About section") 
 
-Snip of part of live page including the title shown in the tab on the browser \
-![Screenshot](urlhere "Live Page Snip") 
+Portfolio Functionality Gif \
+![]( "Live Page Snip") 
 
 ## Credits
 
