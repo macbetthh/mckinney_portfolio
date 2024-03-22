@@ -16,19 +16,23 @@ Section preview \
 ![Screenshot](https://github.com/macbetthh/mckinney_portfolio/blob/main/assets/images/sectionpreview.png "Preview of the sections that will be displayed on the live portfolio - this one depicts a portion of the About section") 
 
 Portfolio Functionality Gif \
-![]( "Live Page Snip") 
+![](https://github.com/macbetthh/mckinney_portfolio/blob/main/assets/images/portfoliofunctionality.gif "30 sec gif showing the functionality of the navigation, page scrolling, and hover effets throughout the portfolio") 
 
 ## Credits
 
 Hero / Banner Image Artist \
+The background image credit goes to [@thewittlesheep](https://twitter.com/thewittlesheep) on x/twitter. She is permanently retired from art at this time. 
+This is an old banner and business card graphic that I commissioned when I used to live-stream. I am the only one usage rights.
 
 Navigation inspiration \
+[Source code for navigation](https://codepen.io/pirrera/pen/gOKBPK) - minor changes made by me to aide in functionality
 
-Grid Generator that helped me make my grid responsive \
-
-Animation / Hover inspiration \
+Portfolio Grid Animation / Hover inspiration \
+[Custom effect inspiration source](https://github.com/miketricking/bootstrap-image-hover) -- Hover Effect 12
+Made quite a few adjustments to match my overall theme, to work properly with hovering grid cells, and to work responsively as best as I could with the current knowledge I have.
 
 Social Media Icons \
+[Icons](https://www.iconfinder.com/search/icons?family=goodies)
 
 
 ## License
