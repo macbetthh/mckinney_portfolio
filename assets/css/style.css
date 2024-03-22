@@ -44,14 +44,15 @@ a {
 .header {
     background-image: url("../images/bethBaxleySunset.jpeg");
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    position: relative;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position:center center;
     background-attachment: fixed;
     margin-top: -100px;
-
+    z-index: -1;
 }
+
 
 
 h1 {
@@ -159,6 +160,7 @@ nav {
   padding: 10px;
   align-items: center;
   overflow: hidden;
+  top: 50px;
   
 }
 
@@ -381,9 +383,21 @@ nav {
 
 
 /* -------- responsive changes --------*/
+
+@media screen and (max-width: 1440px) {
+  .header {
+    height: 100vh;
+    width: auto;
+    background-position: 50%;
+  }
+}
+
+
 @media screen and (max-width: 1024px) {
-  header {
-    background-position-x: center;
+  .header {
+    height: 100vh;
+    width: auto;
+    background-position: 40%;
   }
 
 .first { 
@@ -404,8 +418,10 @@ nav {
 
 
 @media screen and (max-width: 768px) {
-  header {
-    background-position-x: center;
+  .header {
+    background-position: 40%;
+    height: 100vh;
+    width: auto;
   }
 
   .text-box1 {
@@ -465,10 +481,16 @@ nav {
 
 
 @media screen and (max-width: 480px) {
+  .header {
+    background-position: 40%;
+    height: 100vh;
+    width: auto;
+  }
+
   h1 {
     font-size: 13vw;
   }
-    .conh2 {
+  .conh2 {
     font-size: 5vw;
 }
 
