@@ -1,0 +1,556 @@
+/* -------- Universal / Global Attributes -------- */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+
+body {
+margin: 0;
+}
+
+
+
+p {
+display: block;
+font-size: 2vw ;
+max-width:100%;
+height: auto;
+margin: 10px auto;
+text-align: justify;
+}
+
+a {
+text-decoration: none;
+}
+
+
+
+
+
+/* -------- HERO/HEADER IMAGE && SECTION HEADINGS/H1-------- */
+/*image credit to @thewittlesheep on x/twitter - former stream graphic artist for twitch streamers 
+--this is an old banner of mine I commissioned when I used to live-stream that I have rights to use*/
+
+.header {
+  background-image: url("../images/bethBaxleySunset.jpeg");
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-top: -100px;
+  z-index: -1;
+}
+
+
+
+h1 {
+display: inline;
+letter-spacing: 5px;
+position: absolute;
+top: 20px;
+left: 20px;
+font-size: 7.3vw;
+background: -webkit-linear-gradient(#E37C86, #8C5B94);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-transform: uppercase;
+border: 0;
+border-top: 0.2vw solid transparent; 
+border-bottom: 0.2vw solid transparent; 
+overflow: hidden;
+}
+
+
+
+.border {
+border-width: 1vw;
+border-top: 0;
+border-left: 0;
+border-right: 0;
+border-style: solid;
+border-image: linear-gradient(to left,#E37C86, #8C5B94) 1;
+}
+
+
+
+
+
+
+
+/* -------- NAVIGATION -------- */
+
+
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 960px;
+  mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+  margin: 0 auto;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: flex-start;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 1000; 
+}
+
+
+nav ul {
+  text-align: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+nav ul li {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+nav ul li a { 
+  padding: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform:uppercase;
+  color: rgba(28, 33, 47, 0.5);
+  font-size: 32px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 35, 122, 0.7);
+}
+
+nav.sticky {
+position: -webkit-sticky;
+position: sticky;
+top: 0;
+}
+
+
+
+
+/* -------- ABOUT SECTION -------- */
+
+
+.my-sections {
+position: relative;
+height: 100vh;
+width: 100%;
+padding: 40vh; 
+margin: auto;
+display: flex;
+flex-wrap: nowrap;
+padding: 10px;
+align-items: center;
+overflow: hidden;
+top: 50px;
+
+}
+
+
+
+
+
+
+.text-box1 {
+display: flex; /*flex-direction: column in mobile view*/
+flex-wrap: wrap-reverse;
+width: auto;
+height: auto;
+padding-right: 90px;
+margin-top: 260px;
+justify-content: space-evenly;
+align-items: center;
+align-content: center;
+overflow: hidden;
+}
+
+.text-box1 p {
+width: 65%;
+margin-top: 20px;
+}
+
+.text-box1 img{
+width: 25%; 
+}
+
+.devImg{ 
+display: inline-block;
+width: 100%;
+height: auto;
+padding: 6px;
+background: rgba(192, 111, 117, 0.5);
+border-radius: 50em;
+box-shadow: 1px 1px 2px  rgba(40, 40, 40, 0.8);
+-moz-box-shadow: 1px 1px 2px  rgba(40, 40, 40, 0.8);
+-webkit-box-shadow: 1px 1px 2px rgba(40, 40, 40, 0.8);
+}
+
+
+
+
+/* -------- Portfolio SECTION --------*/
+/* Custom effect  inspired by https://github.com/miketricking/bootstrap-image-hover  -- Hover Effect 12 
+-made quite a few adjustments to match my overall theme, to work properly with hovering grid cells, and to work *somewhat* responsively  */
+
+.text-box2 {
+position: relative;
+display: flex;
+flex-wrap: nowrap;
+margin: 300px auto 0;
+width: 100%;
+height: 100%;
+padding: 30px;
+overflow: hidden;
+}
+
+
+.port-grid {
+display: grid;
+margin: auto;
+min-height: 60vh;
+width: 90%;
+height: auto;
+grid-template-columns: repeat(3, minmax(auto, 1fr)); 
+grid-template-rows: repeat(2, minmax(auto, 1fr));
+grid-gap: 25px;
+overflow:hidden;
+}
+
+.work{
+background-color: salmon;
+background-image: url("../images/textbg.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+transition: all 300ms;
+border-radius: 35px;
+width: 100%;
+height: auto;
+overflow: hidden;
+position: relative;
+text-align: center;
+cursor: default;
+}
+
+.first { 
+grid-column: span 2; 
+background-image: url("../images/Screenshot\ 2024-03-14\ 201353.png");
+background-position: 0px -2px;
+}
+
+.second {
+background-image: url("../images/payrolltrackerapp.png");
+background-position: 0px -5px;
+}
+
+
+.work .overlay {
+width: 100%;
+height: 100%;
+position: absolute;
+overflow: hidden;
+top: 0;
+left: 0;
+background-color: rgba(232, 160, 141, 0.3);
+-webkit-transition: all 0.8s  cubic-bezier(0.88,-0.99, 0, 1.81);
+transition: all 0.85s  cubic-bezier(0.88,-0.99, 0, 1.81);
+}
+
+.work:hover .overlay {
+background-color: rgba(139, 122, 170, 0.4);
+}
+
+.work img {
+display: block;
+position: fixed;
+}
+
+.work h2 {
+text-transform: uppercase;
+color: #fff;
+text-align: center;
+position: relative;
+font-size: 25px;
+padding: 10px;
+margin-bottom: 0;
+background: rgba(231, 166, 125, 0.8);
+-webkit-transform: translateY(250px);
+-ms-transform: translateY(250px);
+transform: translateY(250px);
+-webkit-transition: all 0.85s  cubic-bezier(0.88,-0.99, 0, 1.81);
+transition: all 0.85s  cubic-bezier(0.88,-0.99, 0, 1.81);
+}
+
+.work:hover h2 {
+-webkit-transform: translateY(0px);
+-ms-transform: translateY(0px);
+transform: translateY(0px);
+}
+
+#portfolio {
+height: 100%;
+}
+
+
+
+/* -------- CONTACT SECTION --------*/
+/*contact h2 design from https://codepen.io/vedadesigns/pen/GPxYZg with small tweaks to match theme */
+
+
+.conh2 {
+font-size: 1.8vw;
+font-weight: 500;
+letter-spacing: 0;
+line-height: 1.5em;
+padding-bottom: 15px;
+margin-bottom: 20px;
+position: relative;
+}
+
+
+.conh2:before {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+height: 5px;
+width: 55px;
+background-color: #111;
+}
+
+.conh2:after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 2px;
+height: 1px;
+width: 95%;
+max-width: 225px;
+background-color: #333;
+}
+
+.conh2 img {
+width: 45px;
+height: auto;
+}
+
+
+.text-box3 {
+display: flex;
+justify-content: center; 
+align-items: center; 
+flex-direction: column;
+width: 100%;
+height: auto;
+padding: 30px;
+overflow: hidden;
+}
+
+.text-box3 ul {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+padding: 0;
+margin: 20px 0;
+}
+
+.text-box3 li {
+list-style: none;
+margin: 100px; 
+}
+
+
+
+
+
+
+
+
+/* -------- responsive changes --------*/
+@media screen and (min-width: 1440px) and (max-width: 2000px) {
+.header {
+  height: 100vh;
+  width: auto;
+  background-position: 0px;
+}
+}
+
+
+@media screen and (max-width: 1440px) {
+.header {
+  height: 100vh;
+  width: auto;
+  background-position: 50%;
+}
+}
+
+
+@media screen and (max-width: 1024px) {
+.header {
+  height: 100vh;
+  width: auto;
+  background-position: 40%;
+}
+
+.first { 
+grid-column: span 1;
+grid-row: span 2; 
+}
+
+.port-grid {
+display: flex;
+flex-direction: column;
+width: 100%;
+margin: 0;
+/* grid-template-columns: repeat(1, minmax(auto, 1fr)); */
+/* grid-template-rows: repeat(5, minmax(auto, 1fr)); */
+}
+
+.work {
+  height: 15%;
+}
+
+#portfolio {
+  height: 1000px;
+}
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+.header {
+  background-position: 40%;
+  height: 100vh;
+  width: auto;
+}
+
+.text-box1 {
+  flex-direction: column;
+}
+h1 {
+  font-size: 10vw;
+  left: 50%;
+  top: 0px;
+  transform: translateX(-50%);
+  margin: 0 auto;
+}
+.conh2 {
+  font-size: 3vw;
+}
+
+.border {
+  border-bottom-width: 1.5vw;
+}
+nav ul li a {
+  padding: 15px; 
+  font-size: 18px; 
+}
+
+
+.first { 
+grid-column: span 1;
+grid-row: span 2; 
+}
+
+.port-grid {
+display: flex;
+flex-direction: column;
+width: 100%;
+margin: 0;
+/* grid-template-columns: repeat(1, minmax(auto, 1fr)); */
+/* grid-template-rows: repeat(5, minmax(auto, 1fr)); */
+
+}
+
+.text-box1 img {
+  width: 70%;
+  
+}
+.devImg {
+  order: -1;
+}
+.text-box1 {
+  flex-direction: column;
+  padding: 0;
+  margin: 100px;
+}
+.text-box1 p {
+  font-size: 3vw;
+  width: 95%
+}
+}
+
+
+
+@media screen and (max-width: 480px) {
+.header {
+  background-position: 40%;
+  height: 100vh;
+  width: auto;
+}
+
+h1 {
+  font-size: 13vw;
+}
+.conh2 {
+  font-size: 5vw;
+}
+
+.border {
+  border-bottom-width: 1vw; 
+}
+.text-box1 {
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+.text-box1 p {
+  font-size: 4vw;
+  width: 95%
+}
+nav ul li a {
+  padding: 5px; 
+  font-size: 4vw;
+}
+
+.first { 
+  grid-column: span 1;
+  grid-row: span 2; 
+}
+
+.port-grid {
+  width: 100%;
+  margin: 0;
+  grid-template-columns: repeat(1, minmax(auto, 1fr));
+  grid-template-rows: repeat(5, minmax(auto, 1fr));
+
+  }
+  .text-box1 img {
+    width: 95%;
+}
+  .devImg {
+    order: -1;
+  }
+
+}
