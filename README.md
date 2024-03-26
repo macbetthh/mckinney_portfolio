@@ -37,6 +37,7 @@ Contact H2 Borders \
 Social Media Icons \
 [Icons](https://www.iconfinder.com/search/icons?family=goodies)
 
+My TA in this course, Casey, also Helped me with adjusting heights and responsive fixes on the portgrid and work classes.
 
 ## License
 
